@@ -1,0 +1,511 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.navbar{
+    width: calc(100% - 8rem);
+    height: 6rem;
+    top: -18rem;
+    position: fixed;
+    background-color: black;
+    transition: top .8s cubic-bezier(1, 0, 0, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 8rem;
+    padding-left: 2rem;
+    z-index: 1000;
+}
+
+.sidebar{
+    width: 8rem;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    top: 0;
+    bottom: 0;
+}
+
+.menu-icon{
+    margin-top: 3rem;
+    cursor: pointer;
+}
+
+.line{
+    width: 2.5rem;
+    background-color: white;
+    height: .2rem;
+    margin-bottom: .6rem;
+}
+
+.line-2{
+    margin-left: .6rem;
+    transition: .2s linear;
+}
+
+.line-1,.line-3{
+    transition: all .4s;
+}
+
+.menu-icon:hover .line-2{
+    margin-left: 0;
+}
+
+.social-icon-list{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 21rem;
+    flex-direction: column;
+}
+
+.social-icon-link{
+    font-size: 2.2rem;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.social-icon-link:hover{
+    color: #ddd;
+}
+
+.year{
+    color: #eee;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.checkbox:checked ~ .navbar{
+    top: 0;
+}
+
+.checkbox:checked ~ .sidebar .line-1 {
+    transform: rotate(-405deg) translate(-5px, 6px);
+    width: 2.5rem;
+}
+
+.checkbox:checked ~ .sidebar .line-2 {
+    opacity: 0;
+}
+
+.checkbox:checked ~ .sidebar .line-3 {
+    transform: rotate(405deg) translate(-5px, -6px);
+    width: 2.5rem;
+}
+
+/*created by rahul kumawat*/
+
+.logo{
+    color: crimson;
+    font-size: 2.6rem;
+    text-decoration: none;
+}
+
+.nav-list{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 54rem;
+}
+
+.nav-link{
+    color: #fff;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+}
+
+/*created by rahul kumawat*/
+
+
+.nav-link::after{
+    content: '';
+    width: 0rem;
+    height: .2rem;
+    position: absolute;
+    background-color: crimson;
+    right: .1rem;
+    margin: auto;
+    top: 1rem;
+    transition: width .4s cubic-bezier(1,0,0,1);
+}
+.nav-link::before{
+    content: '';
+    width: 0rem;
+    height: .2rem;
+    position: absolute;
+    background-color: crimson;
+    left: .1rem;
+    margin: auto;
+    top: 1rem;
+    transition: width 1s cubic-bezier(1,0,0,1);
+}
+
+/*created by rahul kumawat*/
+
+.nav-link:hover::before,.nav-link:hover::after{
+    width: 4rem;
+}
+
+.home-page{
+    width: calc(100%-8rem);
+    height: 100vh;
+    margin-left: 8rem;
+    background: url('profile.jpg') center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.home-page-heading{
+    position: absolute;
+    top: 0;
+    font-size: 9vw;
+}
+
+/*created by rahul kumawat*/
+
+.home-page-box{
+    background-color: #eee;
+    min-width: 40%;
+    height: 20%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.home-page-box p{
+    max-width: 500px;
+    word-wrap: break-word;
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 5rem;
+    margin-left: 5rem;
+}
+
+.about-us{
+    background-color: #393E41;
+    width: calc(100%-8rem);
+    margin-left: 8rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 60rem;
+}
+
+/*created by rahul kumawat*/
+
+.heading{
+    background: #fff;
+    padding: 2rem 5rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+}
+
+.about-us-profile{
+    background: url('profile.jpg') center no-repeat;
+    background-size: cover;
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+}
+
+.about-us-paragraph{
+    max-width: 400px;
+    text-align: center;
+    color: #777;
+    font-size: 1.4rem;
+}
+
+.btns{
+    display: flex;
+    gap: 7rem;
+    flex-wrap: wrap;
+}
+
+.btn{
+    font-size: 1.4rem;
+    width: 12rem;
+    padding: 1.2rem 2rem;
+    border-radius: 10rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.service{
+    margin-left: 8rem;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    flex-direction: column;
+    height: 100%;
+    width: calc(100%-8rem);
+}
+
+.service-card{
+    display: flex;
+    gap: 10rem;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 30rem;
+    height: 30rem;
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.2s linear;
+    border-radius: 1rem;
+    box-shadow: 5px 10px 20px #888888;
+}
+
+
+/*created by rahul kumawat*/
+
+
+/* common header */
+.common-header {
+    padding: 5rem;
+    text-align: center;
+    color: #222;
+}
+
+.small-underline {
+    width: 9rem;
+    height: .1rem;
+    margin: 0 auto 1rem auto;
+    background-color: #b85d1c;
+}
+
+.big-underline {
+    width: 20rem;
+    height: .1rem;
+    margin: auto;
+    background-color: #b85d1c;
+}
+/* end of common header */
+
+/*created by rahul kumawat*/
+
+/* projects */
+.projects {
+    margin-left: 8rem;
+    background-color: #eee;
+}
+
+.projects-cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-card {
+    width: 60rem;
+    margin: 5rem;
+    background-color: #15141b;
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, .3);
+}
+
+.project-img {
+    width: 100%;
+}
+
+.project-card-content {
+    color: #ddd;
+    padding: 2rem;
+}
+
+.project-card-heading {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+.project-card-paragraph {
+    font-size: 1.5rem;
+    color: #777;
+}
+
+.project-price {
+    font-size: 5rem;
+    font-weight: 300;
+    text-align: right;
+    margin: 0;
+}
+
+/*created by rahul kumawat*/
+
+.project-card-btn {
+    width: 15rem;
+    padding: 1.5rem 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #777;
+    background-color: transparent;
+    border: .1rem solid #333;
+    border-radius: 10rem;
+    outline: none;
+    cursor: pointer;
+}
+
+
+/* end of projects */
+
+.copyright{
+    background-color: #393E41;
+    font-size: 2rem;
+    color: gray;
+    text-align: center;
+    height: 9vh;
+    padding-top: 3rem;
+}
+
+/*created by rahul kumawat*/
+
+[tooltip]::before,
+[tooltip]::after {
+  text-transform: none; /* opinion 2 */
+  font-size: .9em; /* opinion 3 */
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+  position: absolute;
+  display: none;
+  opacity: 0;
+}
+[tooltip]::before {
+  content: '';
+  border: 5px solid transparent; /* opinion 4 */
+  z-index: 1001; /* absurdity 1 */
+}
+[tooltip]::after {
+  content: attr(tooltip); /* magic! */
+  
+  /* most of the rest of this is opinion */
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+  
+  /* 
+    Let the content set the size of the tooltips 
+    but this will also keep them from being obnoxious
+    */
+  min-width: 3em;
+  max-width: 21em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 1ch 1.5ch;
+  border-radius: .3ch;
+  box-shadow: 0 1em 2em -.5em rgba(0, 0, 0, 0.35);
+  background: #333;
+  color: #fff;
+  z-index: 1000; /* absurdity 2 */
+}
+
+/* Make the tooltips respond to hover */
+[tooltip]:hover::before,
+[tooltip]:hover::after {
+  display: block;
+}
+/*created by rahul kumawat*/
+
+/* FLOW: RIGHT */
+[tooltip][flow^="right"]::before {
+  top: 50%;
+  border-left-width: 0;
+  border-right-color: #333;
+  right: calc(0em - 5px);
+  transform: translate(.5em, -50%);
+}
+[tooltip][flow^="right"]::after {
+  top: 50%;
+  left: calc(100% + 5px);
+  transform: translate(.5em, -50%);
+}
+
+/* KEYFRAMES */
+@keyframes tooltips-vert {
+  to {
+    opacity: .9;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes tooltips-horz {
+  to {
+    opacity: .9;
+    transform: translate(0, -50%);
+  }
+}
+
+/* FX All The Things */ 
+[tooltip]:not([flow]):hover::before,
+[tooltip]:not([flow]):hover::after,
+[tooltip][flow^="up"]:hover::before,
+[tooltip][flow^="up"]:hover::after,
+[tooltip][flow^="down"]:hover::before,
+[tooltip][flow^="down"]:hover::after {
+  animation: tooltips-vert 300ms ease-out forwards;
+}
+
+[tooltip][flow^="left"]:hover::before,
+[tooltip][flow^="left"]:hover::after,
+[tooltip][flow^="right"]:hover::before,
+[tooltip][flow^="right"]:hover::after {
+  animation: tooltips-horz 300ms ease-out forwards;
+}
+[tooltip] {
+    position: relative; /* opinion 1 */
+}
+
+
+@media(max-width:750px){
+    .about-us-paragraph{
+        width: 200px;
+    }
+
+    .card{
+        width: 100%;
+    }
+    .navbar{
+        flex-direction: column;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        top: -100%;
+    }
+
+    .nav-list{
+        flex-direction: column;
+        height: 21rem;
+    }
+}
+
+@media(max-width:500px){
+    .home-page-box p{
+        padding: 2rem;
+        margin-top: 2rem;
+        margin-left: 0;
+    }
+}
